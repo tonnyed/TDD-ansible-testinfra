@@ -1,0 +1,26 @@
+---
+# tasks file for tony
+
+- name: install the latest version of Apache
+  yum:
+    name: nginx
+    state: latest
+
+
+
+- name: installed firewald
+  yum:
+    name: firewalld
+    state: latest
+
+- name: start nginx
+  service:
+    name: nginx
+    state: started
+    enabled: yes
+
+- name: start firewalld
+  service:
+    name: firewalld
+    state: started
+    enabled: yes

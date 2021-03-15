@@ -1,0 +1,7 @@
+---
+- name: Converge
+  hosts: all
+  tasks:
+    - name: "Include tony"
+      include_role:
+        name: "TDD-ansible-testinfra"
