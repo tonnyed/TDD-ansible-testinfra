@@ -1,0 +1,33 @@
+1. install molecule
+  - pip install molecule docker
+2. Initialise molecule with empty role using docker drivers
+  - molecule init role --role-name testing-role --driver-name docker
+3. pip install pytest-molecule
+
+note:
+test infra is using this module:
+pytest-testinfra
+
+method list:
+- is_installed #check if a service is installed
+service:
+- is_running #check if a service is running
+- is_enabled #service method to check
+
+- is_masked # check if system service is masked
+- is_listening #check if a unix socket is listening
+- is_valid # method for systemd
+
+- is_resolvable # check if host address can be resolved
+- is_reachable
+- is_file
+- is_directory
+- is_pipe
+- is_socket
+- is_symlink
+- linked_to # resolving symlink
+- .user # host.file("etc/passwd").user return file owner as string
+- .mode
+https://readthedocs.org/projects/testinfra/downloads/pdf/latest/
+
+https://www.linuxuprising.com/2019/11/how-to-install-and-use-docker-on-fedora.html
